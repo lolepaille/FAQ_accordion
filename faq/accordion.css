@@ -1,0 +1,102 @@
+.accordionjs {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .accordionjs .acc_section {
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+    overflow: hidden;
+  }
+  .accordionjs .acc_section .acc_head {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+  }
+  .accordionjs .acc_section .acc_head h3 {
+    line-height: 1;
+    margin: 5px 0;
+  }
+  .accordionjs .acc_section .acc_content {
+    padding: 10px;
+  }
+  .accordionjs .acc_section:first-of-type,
+  .accordionjs .acc_section:first-of-type .acc_head {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  .accordionjs .acc_section:last-of-type,
+  .accordionjs .acc_section:last-of-type .acc_content {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  .accordionjs .acc_section.acc_active > .acc_content {
+    display: block;
+  }
+  .accordionjs .acc_section.acc_active > .acc_head {
+    background: #F9F9F9;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /*NOC CSS*/
+  /* START ACCORDION*/
+#services-accordion { padding: 0px;}
+.acc_head h3 {
+	font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.acc_section {
+	border-width: 1px 0px 1px 0px !important;
+	border-color: #00000020 !important; 
+}
+.acc_head h3{
+	line-height: 1.4em !important;
+}
+.acc_section.acc_active > .acc_head {
+	background: #fff!important;
+}
+.accordionjs .acc_section .acc_head{
+	padding: 15px 0px !important
+		}
+.acc_head > h3:after
+{
+    content: "\e114";
+	font-family: "uncodeicon";
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+	right: 0px;
+    transform: translateY(-50%) rotate(0);
+    transition: transform 200ms ease-out;
+    transform-origin: center;
+}
+.acc_active .acc_head > h3:after {
+    content: "\e114";
+	transform: translateY(-50%) rotate(45deg) !important;
+	font-family: "uncodeicon";
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0);
+    transition: transform 200ms ease-out;
+    transform-origin: center;
+}
+.accordionjs .acc_section .acc_content {
+    padding: 10px 0px 35px;
+	
+}
+.accordionjs .acc_section .acc_content a {
+    text-decoration: underline;
+	
+}
+/* END ACCORDION*/
