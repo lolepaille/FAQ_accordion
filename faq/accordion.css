@@ -44,7 +44,7 @@
     background: #F9F9F9;
     border-bottom: 1px solid #ccc;
   }
-  
+
   /*NOC CSS*/
   /* START ACCORDION*/
 #services-accordion { padding: 0px;}
@@ -57,7 +57,7 @@
 
 .acc_section {
 	border-width: 1px 0px 1px 0px !important;
-	border-color: #00000020 !important; 
+	border-color: #00000020 !important;
 }
 .acc_head h3{
 	line-height: 1.4em !important;
@@ -93,10 +93,16 @@
 }
 .accordionjs .acc_section .acc_content {
     padding: 10px 0px 35px;
-	
+
 }
 .accordionjs .acc_section .acc_content a {
     text-decoration: underline;
-	
+
 }
 /* END ACCORDION*/
+
+/*UNCODE accordions*/
+.uncode-accordion:not(.default-typography) .panel-title > a > span {
+    font-size: 16px;
+}
+/*END accordions*/

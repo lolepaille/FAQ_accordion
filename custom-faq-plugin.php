@@ -2,7 +2,7 @@
 /*
 Plugin Name: FAQ Accordion Plugin
 Description: Adds FAQ and services accordions using shortcodes.
-Version: 1.01
+Version: 1.02
 Author: Lawrence Makoona - Lide Digital Studio
 */
 
@@ -62,6 +62,29 @@ function services_shortcode($atts) {
     return $output;
 }
 add_shortcode('services', 'services_shortcode');
+
+
+// Eye Conditions Shortcode
+function conditions_shortcode($atts) {
+    $posts = get_posts(array(
+        'numberposts' => 100,
+        'orderby' => 'menu_order',
+        'order' => 'DSC',
+        'post_type' => 'eyeconditions',
+    ));
+
+    $output = '<ul id="services-accordion" class="demo-accordion accordionjs" data-active-index="false">';
+    foreach ($posts as $post) {
+        $output .= sprintf(
+            '<li><div><h3>%1$s</h3></div><div>%2$s</div></li>',
+            $post->post_title,
+            do_shortcode(wpautop($post->post_content))
+        );
+    }
+    $output .= '</ul>';
+    return $output;
+}
+add_shortcode('conditions', 'conditions_shortcode');
 
 // Practice Shortcode
 function practice_shortcode($atts) {
